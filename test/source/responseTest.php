@@ -199,20 +199,20 @@ class responseTest extends \PHPUnit_Framework_TestCase {
 		$mock = $this->getMock(
 			'WSIServices\httpBL\response',
 			array('getRawRequest'),
-			array('abcdefghijkl', '127.0.0.1')
+			array('abcdefghijkl', '8.8.4.4')
 		);
 
 		$mock->expects($this->once())
 			->method('getRawRequest')
-			->will($this->returnValue('127.0.0.1'));
+			->will($this->returnValue('8.8.4.4'));
 
 		$this->assertSame(
 			array(array(
-				'host' => '127.0.0.1',
+				'host' => '8.8.4.4',
 				'class' => 'IN',
 				'ttl' => 0,
 				'type' => 'A',
-				'ip' => '127.0.0.1'
+				'ip' => '8.8.4.4'
 			)),
 			$mock->getRawResponse(),
 			'The Raw Response is not being returned correctly.'
