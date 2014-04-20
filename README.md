@@ -16,7 +16,7 @@
 
 WSI-Services httpBL
 ===================
-PHP library for checking IPv4 addresses against Project Honey Pots Blacklist.  An API key from Project Honey Pot is required to utilize this library.  You can create an account and obtain an API key by [creating an account](http://www.projecthoneypot.org/create_account.php) at [Project Honey Pot](http://www.projecthoneypot.org).
+PHP library for checking IPv4 addresses against Project Honey Pots Blacklist.  An API key from Project Honey Pot is required to utilize this library.  You can create an account and obtain an API key by [creating an account](http://www.projecthoneypot.org/create_account.php) at [Project Honey Pot](http://www.projecthoneypot.org), then [request an access key](http://www.projecthoneypot.org/httpbl_configure.php).
 
 About Project Honey Pot
 ====
