@@ -5,6 +5,7 @@ php:
   - 5.5
   - hhvm
 before_script:
+  - echo "extension = xsl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer self-update
   - composer install --dev
 script: utilities/phpunit.sh
