@@ -1,0 +1,31 @@
+{
+    "name": "wsiservices/httpbl",
+    "description": "PHP interface for contacting Project Honeypot‘s http:BL API",
+    "keywords": [
+    	"project honeypot",
+    	"httpbl",
+    	"blacklist",
+    	"dns",
+    	"service"
+    ],
+    "homepage": "http://wsi-services.com",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Sam Likins",
+            "email": "sam.likins@wsi-services.com",
+            "homepage": "http://wsi-services.com",
+            "role": "developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "WSIServices\\httpBL\\": "source/"
+        }
+    },
+    "require-dev": {
+        "phpdocumentor/phpdocumentor": "2.*",
+        "phpunit/phpunit": "4.0.*",
+        "phpunit/php-code-coverage": "2.1.*"
+    }
+}
