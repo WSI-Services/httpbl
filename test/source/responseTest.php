@@ -196,25 +196,30 @@ class responseTest extends \PHPUnit_Framework_TestCase {
 	 * @covers ::__construct()
 	 */
 	public function testGetDnsARecord() {
+		$domainName = 'google-public-dns-b.google.com';
+		$ipAddress = '8.8.4.4';
+
 		$mock = $this->getMock(
 			'WSIServices\httpBL\response',
 			array('getRawRequest'),
-			array('abcdefghijkl', '8.8.4.4')
+			array('abcdefghijkl', $ipAddress)
 		);
 
 		$mock->expects($this->once())
 			->method('getRawRequest')
-			->will($this->returnValue('8.8.4.4'));
+			->will($this->returnValue($domainName));
+
+			$response = $mock->getRawResponse();
 
 		$this->assertSame(
-			array(array(
-				'host' => '8.8.4.4',
-				'class' => 'IN',
-				'ttl' => 0,
-				'type' => 'A',
-				'ip' => '8.8.4.4'
-			)),
-			$mock->getRawResponse(),
+			array(
+				$domainName,
+				$ipAddress
+			),
+			array(
+				$response[0]['host'],
+				$response[0]['ip']
+			),
 			'The Raw Response is not being returned correctly.'
 		);
 	}
