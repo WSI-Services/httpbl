@@ -2,7 +2,7 @@
 
 set -ev
 
-COMPOSER_PATH="~/.phpenv/versions/$(phpenv version-name)/bin/composer.phar"
+COMPOSER_PATH="~/.phpenv/versions/$TRAVIS_PHP_VERSION/bin/composer.phar"
 
 sudo $COMPOSER_PATH self-update
 $COMPOSER_PATH install --dev
