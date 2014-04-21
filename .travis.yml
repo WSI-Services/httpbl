@@ -4,8 +4,10 @@ php:
   - 5.4
   - 5.5
   - hhvm
+ before_install:
+  - sudo apt-get update -qq
+  - sudo apt-get install -y php5-xsl
 before_script:
-  - echo "extension = xsl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
   - composer self-update
   - composer install --dev
 script: utilities/phpunit.sh
