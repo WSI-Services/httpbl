@@ -257,7 +257,7 @@ class response {
 	}
 
 	/**
-	 * Return DNS A record response 
+	 * Return DNS A record response
 	 * @access public
 	 * @return array DNS A record
 	 *

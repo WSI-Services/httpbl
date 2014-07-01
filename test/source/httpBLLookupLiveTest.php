@@ -110,7 +110,7 @@ class httpBLLookupLiveTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @covers WSIServices\httpBL\httpBL::lookup()
-	 * 
+	 *
 	 * @covers WSIServices\httpBL\httpBL::__construct()
 	 * @covers WSIServices\httpBL\response::__construct()
 	 * @covers WSIServices\httpBL\response::getRawRequest()
@@ -128,7 +128,7 @@ class httpBLLookupLiveTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @covers WSIServices\httpBL\httpBL::lookup()
-	 * 
+	 *
 	 * @covers WSIServices\httpBL\httpBL::__construct()
 	 * @covers WSIServices\httpBL\response::__construct()
 	 * @covers WSIServices\httpBL\response::getRawRequest()
@@ -157,7 +157,7 @@ class httpBLLookupLiveTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @covers WSIServices\httpBL\httpBL::lookup()
-	 * 
+	 *
 	 * @covers WSIServices\httpBL\httpBL::__construct()
 	 * @covers WSIServices\httpBL\response::__construct()
 	 * @covers WSIServices\httpBL\response::getRawRequest()
@@ -186,7 +186,7 @@ class httpBLLookupLiveTest extends \PHPUnit_Framework_TestCase {
 
 	/**
 	 * @covers WSIServices\httpBL\httpBL::lookup()
-	 * 
+	 *
 	 * @covers WSIServices\httpBL\httpBL::__construct()
 	 * @covers WSIServices\httpBL\response::__construct()
 	 * @covers WSIServices\httpBL\response::getRawRequest()

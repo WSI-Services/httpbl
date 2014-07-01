@@ -99,7 +99,7 @@ class responseTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructWithInvalidKey() {
 		$response = new response('abcd1234', '127.0.0.1');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -110,7 +110,7 @@ class responseTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructWithInvalidIp4Address() {
 		$response = new response('abcdefghijkl', '256.1.2.3');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -121,7 +121,7 @@ class responseTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructWithPrivateRangeIp() {
 		$response = new response('abcdefghijkl', '192.168.1.1');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -132,7 +132,7 @@ class responseTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructWithIp6Address() {
 		$response = new response('abcdefghijkl', '::1');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 

@@ -59,7 +59,7 @@ class httpBLTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testConstructWithInvalidKey() {
 		$httpBL = new httpBL('abcd1234');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -114,7 +114,7 @@ class httpBLTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testLookupWithInvalidIp4Address() {
 		$this->httpBL->lookup('256.1.2.3');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -127,7 +127,7 @@ class httpBLTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testLookupWithPrivateRangeIp() {
 		$this->httpBL->lookup('192.168.1.1');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -140,7 +140,7 @@ class httpBLTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testLookupWithIp6Address() {
 		$this->httpBL->lookup('::1');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -195,7 +195,7 @@ class httpBLTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testSetResponseClassWithEmptyString() {
 		$this->httpBL->setResponseClass('');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 
@@ -208,7 +208,7 @@ class httpBLTest extends \PHPUnit_Framework_TestCase {
 	 */
 	public function testSetResponseClassWithInvalidName() {
 		$this->httpBL->setResponseClass('WSIServices\Test\Fail\0Test');
-	
+
 		$this->fail('This test should have thrown an InvalidArgumentException.');
 	}
 }
