@@ -294,11 +294,13 @@ class response {
 				&& array_key_exists('ip', $this->rawResponse[0])
 			) {
 				$this->response = explode('.', $this->rawResponse[0]['ip']);
-				if($this->response[0] != '127')
+				if($this->response[0] != '127') {
 					$this->response = false;
-				else
-					foreach ($this->response as &$value)
+				} else {
+					foreach ($this->response as &$value) {
 						$value = (int) $value;
+					}
+				}
 			}
 		}
 
@@ -315,10 +317,8 @@ class response {
 	 * </code>
 	 */
 	public function getTtl() {
-		if(null == $this->responseTtl) {
-			if($this->inBlacklist()) {
-				$this->responseTtl = $this->rawResponse[0]['ttl'];
-			}
+		if(null == $this->responseTtl && $this->inBlacklist()) {
+			$this->responseTtl = $this->rawResponse[0]['ttl'];
 		}
 
 		return $this->responseTtl;
@@ -335,10 +335,8 @@ class response {
 	 * </code>
 	 */
 	public function getType() {
-		if(null == $this->visitorType) {
-			if($this->inBlacklist()) {
-				$this->visitorType = $this->response[3];
-			}
+		if(null == $this->visitorType && $this->inBlacklist()) {
+			$this->visitorType = $this->response[3];
 		}
 
 		return $this->visitorType;
