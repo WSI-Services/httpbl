@@ -253,7 +253,13 @@ class response {
 	 * @codeCoverageIgnore
 	 */
 	protected function getDnsARecord($hostname) {
-		return dns_get_record($hostname, DNS_A);
+		$return = dns_get_record($hostname, DNS_A);
+
+		if(null == $return) {
+			$return = array();
+		}
+
+		return $return;
 	}
 
 	/**
