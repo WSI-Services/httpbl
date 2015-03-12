@@ -9,6 +9,5 @@ matrix:
     allow_failures:
         - php: hhvm
 before_script:
-  - composer self-update
-  - composer install --dev
+  - composer install
 script: utilities/phpunit.sh
