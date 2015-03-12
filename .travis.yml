@@ -8,7 +8,12 @@ php:
 matrix:
     allow_failures:
         - php: hhvm
-before_script:
+install:
   - composer self-update
   - composer install --dev
 script: utilities/phpunit.sh
+after_script:
+  - cat test/logs/testdox.txt
+  - cat test/logs/logfile.tap
+  - cat test/logs/logfile.json
+  - cat test/logs/coverage.xml
