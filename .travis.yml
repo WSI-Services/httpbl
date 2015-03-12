@@ -4,11 +4,9 @@ php:
   - 5.4
   - 5.5
   - 5.6
+  - nightly
   - hhvm
-matrix:
-    allow_failures:
-        - php: hhvm
+  - hhvm-nightly
 before_script:
-  - composer self-update
-  - composer install --dev
+  - composer install
 script: utilities/phpunit.sh
